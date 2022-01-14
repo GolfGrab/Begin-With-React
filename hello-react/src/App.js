@@ -185,13 +185,13 @@ function evaluate({ previousOparand, currentOparand, operation }) {
   if (!previousOparand || !currentOparand) return;
   switch (operation) {
     case "÷":
-      return (parseFloat(previousOparand) / parseFloat(currentOparand)).toString();
+      return (parseFloat(previousOparand) / parseFloat(currentOparand)).toPrecision(10);
     case "×":
-      return (parseFloat(previousOparand) * parseFloat(currentOparand)).toString();
+      return (parseFloat(previousOparand) * parseFloat(currentOparand)).toPrecision(10);
     case "+":
-      return (parseFloat(previousOparand) + parseFloat(currentOparand)).toString();
+      return (parseFloat(previousOparand) + parseFloat(currentOparand)).toPrecision(10);
     case "-":
-      return (parseFloat(previousOparand) - parseFloat(currentOparand)).toString();
+      return (parseFloat(previousOparand) - parseFloat(currentOparand)).toPrecision(10);
     default:
       return;
   }
